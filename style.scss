@@ -1,0 +1,100 @@
+@import "global";
+
+//!  ---Custom Properties---
+
+$Moderate-violet: hsl(263, 55%, 52%);
+$Very-dark-grayish-blue: hsl(217, 19%, 35%);
+$Very-dark-blackish-blue: hsl(219, 29%, 14%);
+$White: hsl(0, 0%, 100%);
+$Light-gray: hsl(0, 0%, 81%);
+$Light-grayish-blue: hsl(210, 46%, 95%);
+
+//!  ---Functions---
+@mixin flex ($direction, $justifyC, $alignI, $gap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justifyC;
+    align-items: $alignI;
+    gap: $gap;
+}
+
+//!  ---Components---
+
+.container {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    width: clamp(350px, 80vw, 750px);
+    @include flex(column, center, center, 1.5rem);
+
+    .card {
+        border-radius: 15px;
+        padding: 1.5rem;
+        z-index: 2;
+
+        .card-header {
+            @include flex(row, start, center, 1rem);
+            margin-bottom: 1.2rem;
+
+            .portrait {
+                height: 2.5rem;
+                width: 2.5rem;
+                border-radius: 50%;
+            }
+
+            .card-header-name {
+                height: 100%;
+                @include flex(column, center, start, .2rem);
+
+                h4 {
+                    opacity: .5;
+                }
+            }
+        }
+
+        .card-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            p {
+                opacity: .7;
+            }
+        }
+    }
+
+    .card:nth-child(1) {
+        background-color: $Moderate-violet;
+        color: white;
+        position: relative;
+
+        .card-header .marks {
+            position: absolute;
+            top: 0;
+            right: 1.5rem;
+            z-index: -1;
+        }
+    }
+
+    .card:nth-child(2) {
+        background-color: $Very-dark-grayish-blue;
+        color: white;
+    }
+
+    .card:nth-child(3) {
+        background-color: $Light-grayish-blue;
+        color: $Very-dark-grayish-blue;
+    }
+
+    .card:nth-child(4) {
+        background-color: $Very-dark-blackish-blue;
+        color: white;
+    }
+
+    .card:nth-child(5) {
+        background-color: $Light-grayish-blue;
+        color: $Very-dark-grayish-blue;
+    }
+
+}
+
+@import "responsive";

@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: hsl(0deg, 0%, 81%);
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  width: clamp(350px, 80vw, 750px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.container .card {
+  border-radius: 15px;
+  padding: 1.5rem;
+  z-index: 2;
+}
+.container .card .card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+.container .card .card-header .portrait {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+}
+.container .card .card-header .card-header-name {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 0.2rem;
+}
+.container .card .card-header .card-header-name h4 {
+  opacity: 0.5;
+}
+.container .card .card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.container .card .card-content p {
+  opacity: 0.7;
+}
+.container .card:nth-child(1) {
+  background-color: hsl(263deg, 55%, 52%);
+  color: white;
+  position: relative;
+}
+.container .card:nth-child(1) .card-header .marks {
+  position: absolute;
+  top: 0;
+  right: 1.5rem;
+  z-index: -1;
+}
+.container .card:nth-child(2) {
+  background-color: hsl(217deg, 19%, 35%);
+  color: white;
+}
+.container .card:nth-child(3) {
+  background-color: hsl(210deg, 46%, 95%);
+  color: hsl(217deg, 19%, 35%);
+}
+.container .card:nth-child(4) {
+  background-color: hsl(219deg, 29%, 14%);
+  color: white;
+}
+.container .card:nth-child(5) {
+  background-color: hsl(210deg, 46%, 95%);
+  color: hsl(217deg, 19%, 35%);
+}
+
+@media screen and (min-width: 760px) {
+  .container {
+    margin: 0;
+    width: clamp(500px, 75vw, 1000px);
+    height: clamp(300px, 70vh, 100vh);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .container .card {
+    height: 100%;
+  }
+  .container .card:nth-child(1) {
+    grid-area: span 1/span 2;
+  }
+  .container .card:nth-child(4) {
+    grid-area: span 1/span 2;
+  }
+  .container .card:nth-child(5) {
+    grid-area: 1/4/3/5;
+  }
+}/*# sourceMappingURL=style.css.map */

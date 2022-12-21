@@ -1,0 +1,25 @@
+@media screen and(min-width: 760px) {
+    .container {
+        margin: 0;
+        width: clamp(500px, 75vw, 1000px);
+        height: clamp(300px, 70vh, 100vh);
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 1.5rem;
+        .card{
+            height: 100%;
+        }
+        .card:nth-child(1) {
+            grid-area: span 1 / span 2;
+        }
+
+        .card:nth-child(4) {
+            grid-area: span 1/ span 2;
+        }
+
+        .card:nth-child(5) {
+            grid-area: 1/4/3/5;
+        }
+    }
+}
