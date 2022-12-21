@@ -12,6 +12,10 @@
         }
         .card:nth-child(1) {
             grid-area: span 1 / span 2;
+
+            .card-header .marks {
+                right: 4.5rem;
+            }
         }
 
         .card:nth-child(4) {

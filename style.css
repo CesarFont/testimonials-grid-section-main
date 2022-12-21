@@ -15,7 +15,7 @@ body {
   font-family: "Barlow Semi Condensed", sans-serif;
   width: 100vw;
   min-height: 100vh;
-  background-color: hsl(0deg, 0%, 81%);
+  background-color: hsl(210deg, 46%, 95%);
   font-size: 13px;
   display: flex;
   flex-direction: column;
@@ -86,7 +86,7 @@ body {
   color: white;
 }
 .container .card:nth-child(3) {
-  background-color: hsl(210deg, 46%, 95%);
+  background-color: white;
   color: hsl(217deg, 19%, 35%);
 }
 .container .card:nth-child(4) {
@@ -94,7 +94,7 @@ body {
   color: white;
 }
 .container .card:nth-child(5) {
-  background-color: hsl(210deg, 46%, 95%);
+  background-color: white;
   color: hsl(217deg, 19%, 35%);
 }
 
@@ -113,6 +113,9 @@ body {
   }
   .container .card:nth-child(1) {
     grid-area: span 1/span 2;
+  }
+  .container .card:nth-child(1) .card-header .marks {
+    right: 4.5rem;
   }
   .container .card:nth-child(4) {
     grid-area: span 1/span 2;
